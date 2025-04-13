@@ -1,0 +1,4 @@
+Hi I’m process 13439 with return arg 1 and my parent is 13438.
+Hi I am process 13439 with return arg 1 and I found the hidden key in position A[63].
+Hi I’m process 13440 with return arg 2 and my parent is 13438.
+Max=100, Avg=50.36
