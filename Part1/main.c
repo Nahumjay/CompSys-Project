@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> 
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -51,6 +51,10 @@ void generate_input_file(const char *filename, int L) {
 
 void read_file_into_array(const char *filename, int *arr, int L) {
     FILE *file = fopen(filename, "r");
+    if (!file) {
+        perror("Failed to open input file");
+        exit(1);
+    }
     for (int i = 0; i < L; i++) {
         fscanf(file, "%d", &arr[i]);
     }
@@ -93,86 +97,125 @@ int main(int argc, char *argv[]) {
         exit(1);
     }
 
-    // Start timing
-    clock_t start_time = clock();
+    clock_t start_time = clock();   // Start timing
 
     generate_input_file(filename, L);
-
     int *arr = malloc(L * sizeof(int));
+    if (!arr) {
+        perror("Memory allocation failed");
+        fclose(out);
+        exit(1);
+    }
+    
     read_file_into_array(filename, arr, L);
 
     int chunk_size = L / PN;
-    int pipes[2];
-    pipe(pipes);
+    int pipes[PN][2]; // Create a separate pipe for each child process
+    pid_t pids[PN];   // Track child PIDs
+    
+    // Create pipes before forking
+    for (int i = 0; i < PN; i++) {
+        if (pipe(pipes[i]) == -1) {
+            perror("Pipe creation failed");
+            free(arr);
+            fclose(out);
+            exit(1);
+        }
+    }
 
+    // Fork child processes
+    for (int i = 0; i < PN; i++) {
+        pids[i] = fork();
+        
+        if (pids[i] < 0) {
+            perror("Fork failed");
+            free(arr);
+            fclose(out);
+            exit(1);
+        }
+        
+        if (pids[i] == 0) { // Child process
+            // Close all unneeded pipes
+            for (int j = 0; j < PN; j++) {
+                if (j != i) {
+                    close(pipes[j][0]);
+                    close(pipes[j][1]);
+                }
+            }
+            close(pipes[i][0]); // Close read end in child
+            
+            // Calculate segment boundaries
+            int start = i * chunk_size;
+            int end = (i == PN - 1) ? L : start + chunk_size;
+            
+            // Process the segment
+            struct Metrics result = process_segment(arr, start, end, i + 1);
+            
+            // Send results to parent
+            if (write(pipes[i][1], &result, sizeof(result)) != sizeof(result)) {
+                perror("Write failed");
+            }
+            
+            close(pipes[i][1]); // Close pipe
+            free(arr);
+            exit(i + 1); // Exit with return code
+        }
+    }
+    
+    // Parent process
+    for (int i = 0; i < PN; i++) {
+        close(pipes[i][1]); // Close write ends of all pipes
+    }
+    
+    system("pstree -p"); // Show process tree
+    
     int total_hidden_reported = 0;
     int global_max = -99999;
     float total_sum = 0;
-
-    pid_t root_pid = getpid();
-
-    for (int i = 0; i < PN; i++) {
-        if (i != 0) break; // ensure only one parent continues the loop
-
-        pid_t pid = fork();
-
-        if (pid == 0) {
-            for (int j = 1; j < PN; j++) {
-                if (i + j >= PN) break;
-                pid_t child = fork();
-                if (child == 0) {
-                    i += j;
-                } else {
-                    break;
-                }
-            }
-
-            int start = i * chunk_size;
-            int end = (i == PN - 1) ? L : start + chunk_size;
-            struct Metrics result = process_segment(arr, start, end, i + 1);
-
-            write(pipes[1], &result, sizeof(result));
-            sleep(10);
-            exit(i + 1);
+    
+   
+    for (int i = 0; i < PN; i++) {  // Collect results from all children
+        struct Metrics result;
+        ssize_t r = read(pipes[i][0], &result, sizeof(result));
+        
+        if (r != sizeof(result)) {
+            fprintf(out, "Error reading result from child %d\n", i + 1);
+            continue;
         }
-    }
-
-    // Only root collects and prints
-    if (getpid() == root_pid) {
-        system("pstree -p");
-
-        for (int i = 0; i < PN; i++) {
-            struct Metrics result;
-            read(pipes[0], &result, sizeof(result));
-
-            fprintf(out, "Hi I’m process %d with return arg %d and my parent is %d.\n",
-                    result.pid, result.returnArg, result.ppid);
-
-            for (int j = 0; j < result.foundKeys && total_hidden_reported < H; j++) {
-                fprintf(out, "Hi I am process %d with return arg %d and I found the hidden key in position A[%d].\n",
-                        result.pid, result.returnArg, result.hiddenKeys[j]);
-                total_hidden_reported++;
-            }
-
-            fprintf(out, "Max=%d, Avg =%.0f\n", result.max, result.avg);
-
-            if (result.max > global_max) global_max = result.max;
-            total_sum += result.avg * chunk_size;
-
-            int status;
-            wait(&status);
+        
+        fprintf(out, "Hi I'm process %d with return arg %d and my parent is %d.\n",
+                result.pid, result.returnArg, result.ppid);
+        
+        for (int j = 0; j < result.foundKeys && total_hidden_reported < H; j++) {
+            fprintf(out, "Hi I am process %d with return arg %d and I found the hidden key in position A[%d].\n",
+                    result.pid, result.returnArg, result.hiddenKeys[j]);
+            total_hidden_reported++;
         }
-
-        float global_avg = total_sum / L;
-        clock_t end_time = clock();
-        double exec_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
-
-        fprintf(out, "Max=%d, Avg=%.2f\n", global_max, global_avg);
-        fprintf(out, "Execution Time: %.2f seconds\n", exec_time);
-
-        fclose(out);
-        free(arr);
+        
+        fprintf(out, "Max=%d, Avg=%.0f\n", result.max, result.avg);
+        
+        if (result.max > global_max) global_max = result.max;
+        total_sum += result.avg * chunk_size;
+        
+        
+        close(pipes[i][0]); // Close read end of pipe
     }
-
+    
+    for (int i = 0; i < PN; i++) {  // Wait for all child processes to finish
+        int status;
+        waitpid(pids[i], &status, 0);
+    }
+    
+    float global_avg = total_sum / L;
+    clock_t end_time = clock();
+    double exec_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    
+    fprintf(out, "Max=%d, Avg=%.2f\n", global_max, global_avg);
+    fprintf(out, "Execution Time: %.2f seconds\n", exec_time);
+    
+    fflush(out);
+    fclose(out);
+    free(arr);
+    
     return 0;
 }

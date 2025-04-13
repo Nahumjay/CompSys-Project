@@ -1,91 +1,82 @@
-<<<<<<< HEAD
-Hi I’m process 10160 with return arg 1 and my parent is 10159.
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[82].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[96].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[454].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[589].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[942].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1275].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1313].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1676].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1683].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1849].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1931].
-Hi I am process 10160 with return arg 1 and I found the hidden key in position A[1972].
-Hi I’m process 10161 with return arg 2 and my parent is 10159.
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[2234].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[2517].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[2686].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[3132].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[3471].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[3650].
-Hi I am process 10161 with return arg 2 and I found the hidden key in position A[3678].
-Hi I’m process 10162 with return arg 3 and my parent is 10159.
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[4220].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[4302].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[4529].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[4884].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[4991].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[5167].
-Hi I am process 10162 with return arg 3 and I found the hidden key in position A[5530].
-Hi I’m process 10163 with return arg 4 and my parent is 10159.
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6003].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6109].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6213].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6391].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6584].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[6884].
-Hi I am process 10163 with return arg 4 and I found the hidden key in position A[7958].
-Hi I’m process 10164 with return arg 5 and my parent is 10159.
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[8124].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[8250].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[8851].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[8931].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[9054].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[9529].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[9791].
-Hi I am process 10164 with return arg 5 and I found the hidden key in position A[9942].
-Hi I’m process 10165 with return arg 6 and my parent is 10159.
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[10160].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[10189].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[10632].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[10921].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[10932].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[11059].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[11349].
-Hi I am process 10165 with return arg 6 and I found the hidden key in position A[11763].
-Hi I’m process 10166 with return arg 7 and my parent is 10159.
-Hi I am process 10166 with return arg 7 and I found the hidden key in position A[12038].
-Hi I’m process 10167 with return arg 8 and my parent is 10159.
-Hi I’m process 10168 with return arg 9 and my parent is 10159.
-Hi I’m process 10169 with return arg 10 and my parent is 10159.
-Max=100, Avg=50.23
-=======
-Hi I’m process 11422 with return arg 1 and my parent is 11421.
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[22].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[156].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[244].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[254].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[285].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[298].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[301].
-Hi I am process 11422 with return arg 1 and I found the hidden key in position A[552].
-Max=100, Avg =51
-Hi I’m process 11424 with return arg 2 and my parent is 11422.
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[725].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[781].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[899].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[995].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1016].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1018].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1019].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1020].
-Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1315].
-Max=100, Avg =50
-Hi I’m process 11425 with return arg 4 and my parent is 11424.
-Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2117].
-Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2337].
-Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2557].
-Max=100, Avg =50
-Hi I’m process 11427 with return arg 7 and my parent 
->>>>>>> 5727778 (updated)
+Hi I'm process 20714 with return arg 1 and my parent is 20713.
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[26].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[413].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[696].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1070].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1280].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1297].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1477].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1722].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1924].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1925].
+Hi I am process 20714 with return arg 1 and I found the hidden key in position A[1950].
+Max=100, Avg=50
+Hi I'm process 20715 with return arg 2 and my parent is 20713.
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[2363].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[2626].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[2660].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3028].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3508].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3604].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3639].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3851].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3948].
+Hi I am process 20715 with return arg 2 and I found the hidden key in position A[3958].
+Max=100, Avg=51
+Hi I'm process 20716 with return arg 3 and my parent is 20713.
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4137].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4142].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4308].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4362].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4447].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[4891].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[5204].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[5437].
+Hi I am process 20716 with return arg 3 and I found the hidden key in position A[5640].
+Max=100, Avg=51
+Hi I'm process 20717 with return arg 4 and my parent is 20713.
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[6130].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[6175].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[6597].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7061].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7170].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7286].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7573].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7831].
+Hi I am process 20717 with return arg 4 and I found the hidden key in position A[7933].
+Max=100, Avg=51
+Hi I'm process 20718 with return arg 5 and my parent is 20713.
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[8346].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[8976].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[8983].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9060].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9197].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9245].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9271].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9643].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9683].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9700].
+Hi I am process 20718 with return arg 5 and I found the hidden key in position A[9973].
+Max=100, Avg=51
+Hi I'm process 20719 with return arg 6 and my parent is 20713.
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[10274].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11174].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11186].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11313].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11344].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11719].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11778].
+Hi I am process 20719 with return arg 6 and I found the hidden key in position A[11935].
+Max=100, Avg=49
+Hi I'm process 20720 with return arg 7 and my parent is 20713.
+Hi I am process 20720 with return arg 7 and I found the hidden key in position A[12500].
+Hi I am process 20720 with return arg 7 and I found the hidden key in position A[12643].
+Max=100, Avg=50
+Hi I'm process 20721 with return arg 8 and my parent is 20713.
+Max=100, Avg=50
+Hi I'm process 20722 with return arg 9 and my parent is 20713.
+Max=100, Avg=50
+Hi I'm process 20723 with return arg 10 and my parent is 20713.
+Max=100, Avg=50
+Max=100, Avg=50.27
+Execution Time: 0.00 seconds
