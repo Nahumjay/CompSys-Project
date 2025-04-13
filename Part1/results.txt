@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Hi I’m process 10160 with return arg 1 and my parent is 10159.
 Hi I am process 10160 with return arg 1 and I found the hidden key in position A[82].
 Hi I am process 10160 with return arg 1 and I found the hidden key in position A[96].
@@ -59,3 +60,32 @@ Hi I’m process 10167 with return arg 8 and my parent is 10159.
 Hi I’m process 10168 with return arg 9 and my parent is 10159.
 Hi I’m process 10169 with return arg 10 and my parent is 10159.
 Max=100, Avg=50.23
+=======
+Hi I’m process 11422 with return arg 1 and my parent is 11421.
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[22].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[156].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[244].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[254].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[285].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[298].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[301].
+Hi I am process 11422 with return arg 1 and I found the hidden key in position A[552].
+Max=100, Avg =51
+Hi I’m process 11424 with return arg 2 and my parent is 11422.
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[725].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[781].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[899].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[995].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1016].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1018].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1019].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1020].
+Hi I am process 11424 with return arg 2 and I found the hidden key in position A[1315].
+Max=100, Avg =50
+Hi I’m process 11425 with return arg 4 and my parent is 11424.
+Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2117].
+Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2337].
+Hi I am process 11425 with return arg 4 and I found the hidden key in position A[2557].
+Max=100, Avg =50
+Hi I’m process 11427 with return arg 7 and my parent 
+>>>>>>> 5727778 (updated)
